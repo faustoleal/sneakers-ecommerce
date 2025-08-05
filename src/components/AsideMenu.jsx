@@ -6,6 +6,7 @@ const AsideMenu = () => {
           <img src="./images/icon-close.svg" alt="close" />
         </button>
         <br />
+        <br />
         <a>Collections</a>
         <a>Men</a>
         <a>Women</a>
