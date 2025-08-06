@@ -1,3 +1,5 @@
+/* Estilos Mobile First */
+
 /* resetando estilos */
 
 * {
@@ -13,7 +15,6 @@ button {
 
 a {
   text-decoration: none;
-  color: #000;
 }
 
 /* font y colores del projecto */
@@ -38,11 +39,11 @@ a {
 /* NavBar compontent */
 
 .navBar {
-  height: 75px;
-  line-height: 75px;
+  height: 100px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  cursor: pointer;
 }
 
 .menu-icon {
@@ -56,11 +57,20 @@ a {
 
 .links {
   display: none;
-  margin-left: 35px;
 }
 
 .links a {
+  height: inherit;
+  display: flex;
+  align-items: center;
   margin: 0 5px;
+  padding: 0;
+  font-weight: 400;
+  color: var(--dark-grayish-blue);
+}
+
+.links a:hover {
+  border-bottom: 3px solid var(--orange);
 }
 
 .usuario {
@@ -88,7 +98,7 @@ a {
   .navBar {
     max-width: 90%;
     margin: 0 auto;
-    border-bottom: 1px solid var(--dark-grayish-blue);
+    border-bottom: 1px solid var(--grayish-blue);
   }
 
   .menu-icon {
@@ -96,7 +106,9 @@ a {
   }
 
   .links {
+    height: inherit;
     display: flex;
+    margin-left: 35px;
   }
 
   .usuario {
@@ -125,7 +137,12 @@ a {
   padding: 20px;
 }
 
-.menu a {
+.menu nav {
+  display: flex;
+  flex-direction: column;
+}
+
+nav a {
   font-weight: 900;
   padding: 8px 0;
 }
