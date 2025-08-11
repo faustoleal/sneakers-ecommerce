@@ -2,6 +2,7 @@ import "./App.css";
 import AsideMenu from "./components/AsideMenu";
 import Main from "./components/Main";
 import NavBar from "./components/NavBar";
+import Thumbnail from "./components/Thumbnail";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <NavBar />
       <AsideMenu />
       <Main />
+      <Thumbnail />
     </>
   );
 }

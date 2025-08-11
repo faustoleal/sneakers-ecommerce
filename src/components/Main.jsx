@@ -16,7 +16,11 @@ const Main = () => {
             </div>
           </div>
           <div className="carousel-images-cards">
-            <img src="./images/image-product-1-thumbnail.jpg" alt="card1" />
+            <img
+              src="./images/image-product-1-thumbnail.jpg"
+              alt="card1"
+              className="active"
+            />
             <img src="./images/image-product-2-thumbnail.jpg" alt="card2" />
             <img src="./images/image-product-3-thumbnail.jpg" alt="card3" />
             <img src="./images/image-product-4-thumbnail.jpg" alt="card4" />
@@ -43,12 +47,7 @@ const Main = () => {
           <div className="add-cart">
             <div>
               <img src="./images/icon-minus.svg" alt="minus" />
-              <input
-                type="number"
-                name="quantity"
-                id="quantity"
-                placeholder="0"
-              />
+              <span>0</span>
               <img src="./images/icon-plus.svg" alt="plus" />
             </div>
             <button>
