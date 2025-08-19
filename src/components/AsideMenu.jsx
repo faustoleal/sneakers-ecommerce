@@ -1,9 +1,9 @@
-const AsideMenu = () => {
+const AsideMenu = ({ close }) => {
   return (
     <aside className="aside-menu">
       <div className="menu">
         <button style={{ textAlign: "start" }}>
-          <img src="./images/icon-close.svg" alt="close" />
+          <img src="./images/icon-close.svg" alt="close" onClick={close} />
         </button>
         <br />
         <br />

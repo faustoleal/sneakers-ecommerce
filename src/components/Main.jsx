@@ -1,30 +1,13 @@
-const Main = () => {
+import Carousel from "./Carousel";
+
+const carouselSneakers = ["sneakers1", "sneakers2", "sneakers3", "sneakers4"];
+
+const Main = ({ open }) => {
   return (
     <main>
       <div className="main-responsive">
         <section className="product-images">
-          <div className="carousel">
-            <div className="carousel-images">
-              <img src="./images/image-product-1.jpg" alt="sneakers1" />
-              <img src="./images/image-product-2.jpg" alt="sneakers2" />
-              <img src="./images/image-product-3.jpg" alt="sneakers3" />
-              <img src="./images/image-product-4.jpg" alt="sneakers4" />
-            </div>
-            <div className="carousel-controls">
-              <img src="./images/icon-previous.svg" alt="prev" id="prev" />
-              <img src="./images/icon-next.svg" alt="next" id="next" />
-            </div>
-          </div>
-          <div className="carousel-images-cards">
-            <img
-              src="./images/image-product-1-thumbnail.jpg"
-              alt="card1"
-              className="active"
-            />
-            <img src="./images/image-product-2-thumbnail.jpg" alt="card2" />
-            <img src="./images/image-product-3-thumbnail.jpg" alt="card3" />
-            <img src="./images/image-product-4-thumbnail.jpg" alt="card4" />
-          </div>
+          <Carousel array={carouselSneakers} nombre="carousel" open={open} />
         </section>
         <section className="product-description">
           <h5>SNEAKER COMPANY</h5>

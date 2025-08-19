@@ -142,7 +142,7 @@ span {
 
 /* AsideMenu component */
 .aside-menu {
-  display: none;
+  display: flex;
   z-index: 99;
   height: 100vh;
   width: 100%;
@@ -225,11 +225,11 @@ main {
   padding: 10px 12px;
 }
 
-#prev {
+#carousel-prev-btn {
   left: 16px;
 }
 
-#next {
+#carousel-next-btn {
   right: 16px;
 }
 
@@ -356,6 +356,7 @@ main {
     justify-content: space-around;
     width: 90%;
     height: inherit;
+    margin-top: 32px;
   }
 
   .product-images {
@@ -529,12 +530,12 @@ main {
   padding: 10px 12px;
 }
 
-#prev-btn {
+#thumbnail-carousel-prev-btn {
   left: 0;
   transform: translate(-50%);
 }
 
-#next-btn {
+#thumbnail-carousel-next-btn {
   right: 0;
   transform: translateX(50%);
 }
