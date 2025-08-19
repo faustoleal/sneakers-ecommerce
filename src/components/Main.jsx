@@ -26,7 +26,6 @@ const Main = () => {
             <img src="./images/image-product-4-thumbnail.jpg" alt="card4" />
           </div>
         </section>
-
         <section className="product-description">
           <h5>SNEAKER COMPANY</h5>
           <h1>
