@@ -1,35 +1,20 @@
-import { useState } from "react";
 import "./App.css";
 import AsideMenu from "./components/AsideMenu";
 import Main from "./components/Main";
 import NavBar from "./components/NavBar";
 import Thumbnail from "./components/Thumbnail";
+import useShowHook from "./showHook";
 
 function App() {
-  const [showAsideMenu, setShowAsideMenu] = useState(false);
-  const [showThumbnail, setShowThumbnail] = useState(false);
+  const showAsideMenu = useShowHook();
+  const showThumbnail = useShowHook();
 
-  const openAsideMenu = () => {
-    setShowAsideMenu(true);
-  };
-
-  const closeAsideMenu = () => {
-    setShowAsideMenu(false);
-  };
-
-  const openThumbnail = () => {
-    setShowThumbnail(true);
-  };
-
-  const closeThumbnail = () => {
-    setShowThumbnail(false);
-  };
   return (
     <>
-      <NavBar open={openAsideMenu} />
-      {showAsideMenu === true && <AsideMenu close={closeAsideMenu} />}
-      <Main open={openThumbnail} />
-      {showThumbnail === true && <Thumbnail close={closeThumbnail} />}
+      <NavBar open={showAsideMenu.open} />
+      {showAsideMenu.show === true && <AsideMenu close={showAsideMenu.close} />}
+      <Main open={showThumbnail.open} />
+      {showThumbnail.show === true && <Thumbnail close={showThumbnail.close} />}
     </>
   );
 }
