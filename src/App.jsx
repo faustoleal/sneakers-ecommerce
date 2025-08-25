@@ -1,5 +1,6 @@
 import "./App.css";
 import AsideMenu from "./components/AsideMenu";
+import Cart from "./components/Cart";
 import Main from "./components/Main";
 import NavBar from "./components/NavBar";
 import Thumbnail from "./components/Thumbnail";
@@ -12,6 +13,7 @@ function App() {
   return (
     <>
       <NavBar open={showAsideMenu.open} />
+      <Cart />
       {showAsideMenu.show === true && <AsideMenu close={showAsideMenu.close} />}
       <Main open={showThumbnail.open} />
       {showThumbnail.show === true && <Thumbnail close={showThumbnail.close} />}

@@ -16,7 +16,7 @@ const NavBar = ({ open }) => {
         <a>Contact</a>
       </nav>
       <section className="usuario">
-        <img className="cart" src="./images/icon-cart.svg" alt="cart" />
+        <img className="cart-icon" src="./images/icon-cart.svg" alt="cart" />
         <img className="avatar" src="./images/image-avatar.png" alt="avatar" />
       </section>
     </header>
