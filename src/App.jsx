@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import AsideMenu from "./components/AsideMenu";
 import Cart from "./components/Cart";
@@ -9,11 +10,16 @@ import useShowHook from "./showHook";
 function App() {
   const showAsideMenu = useShowHook();
   const showThumbnail = useShowHook();
+  const [toggleCart, setToggleCart] = useState(false);
+
+  const mostrarCart = () => {
+    setToggleCart((prev) => !prev);
+  };
 
   return (
     <>
-      <NavBar open={showAsideMenu.open} />
-      <Cart />
+      <NavBar open={showAsideMenu.open} mostrarCart={mostrarCart} />
+      {toggleCart === true && <Cart />}
       {showAsideMenu.show === true && <AsideMenu close={showAsideMenu.close} />}
       <Main open={showThumbnail.open} />
       {showThumbnail.show === true && <Thumbnail close={showThumbnail.close} />}

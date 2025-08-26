@@ -1,4 +1,4 @@
-const NavBar = ({ open }) => {
+const NavBar = ({ open, mostrarCart }) => {
   return (
     <header className="navBar">
       <img
@@ -16,7 +16,12 @@ const NavBar = ({ open }) => {
         <a>Contact</a>
       </nav>
       <section className="usuario">
-        <img className="cart-icon" src="./images/icon-cart.svg" alt="cart" />
+        <img
+          className="cart-icon"
+          src="./images/icon-cart.svg"
+          alt="cart"
+          onClick={mostrarCart}
+        />
         <img className="avatar" src="./images/image-avatar.png" alt="avatar" />
       </section>
     </header>
