@@ -1,10 +1,12 @@
 const Cart = () => {
   return (
     <div className="cart">
-      <h2 className="cart-title">Cart</h2>
+      <h3 className="cart-title">Cart</h3>
       <hr />
       <div className="cart-content">
-        <p>Your cart is empty</p>
+        <p>
+          <strong>Your cart is empty</strong>
+        </p>
       </div>
     </div>
   );
