@@ -11,6 +11,7 @@ function App() {
   const showAsideMenu = useShowHook();
   const showThumbnail = useShowHook();
   const [toggleCart, setToggleCart] = useState(false);
+  const [cartItems, setCartItems] = useState(null);
 
   const mostrarCart = () => {
     setToggleCart((prev) => !prev);
@@ -19,9 +20,9 @@ function App() {
   return (
     <>
       <NavBar open={showAsideMenu.open} mostrarCart={mostrarCart} />
-      {toggleCart === true && <Cart />}
+      {toggleCart === true && <Cart product={cartItems} />}
       {showAsideMenu.show === true && <AsideMenu close={showAsideMenu.close} />}
-      <Main open={showThumbnail.open} />
+      <Main open={showThumbnail.open} setCartItems={setCartItems} />
       {showThumbnail.show === true && <Thumbnail close={showThumbnail.close} />}
     </>
   );

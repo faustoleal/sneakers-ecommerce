@@ -1,8 +1,21 @@
+import { useState } from "react";
 import Carousel from "./Carousel";
 
 const carouselSneakers = ["sneakers1", "sneakers2", "sneakers3", "sneakers4"];
 
-const Main = ({ open }) => {
+const sneaker = {
+  name: "Fall Limited Edition Sneakers",
+  price: "125.00",
+  image: "./images/image-product-1.jpg",
+};
+
+const Main = ({ open, setCartItems }) => {
+  const [quantity, setQuantity] = useState(0);
+
+  const addItemToCart = (product) => {
+    setCartItems({ ...product, quantity });
+  };
+
   return (
     <main>
       <div className="main-responsive">
@@ -28,11 +41,19 @@ const Main = ({ open }) => {
           </div>
           <div className="add-cart">
             <div>
-              <img src="./images/icon-minus.svg" alt="minus" />
-              <span>0</span>
-              <img src="./images/icon-plus.svg" alt="plus" />
+              <img
+                src="./images/icon-minus.svg"
+                alt="minus"
+                onClick={() => setQuantity((num) => Math.max(num - 1, 0))}
+              />
+              <span>{quantity}</span>
+              <img
+                src="./images/icon-plus.svg"
+                alt="plus"
+                onClick={() => setQuantity((num) => num + 1)}
+              />
             </div>
-            <button>
+            <button onClick={() => addItemToCart(sneaker)}>
               <img src="./images/icon-cart.svg" alt="cart" />
               <span>Add to cart</span>
             </button>
