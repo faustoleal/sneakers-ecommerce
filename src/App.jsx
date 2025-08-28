@@ -20,7 +20,9 @@ function App() {
   return (
     <>
       <NavBar open={showAsideMenu.open} mostrarCart={mostrarCart} />
-      {toggleCart === true && <Cart product={cartItems} />}
+      {toggleCart === true && (
+        <Cart product={cartItems} setCartItems={setCartItems} />
+      )}
       {showAsideMenu.show === true && <AsideMenu close={showAsideMenu.close} />}
       <Main open={showThumbnail.open} setCartItems={setCartItems} />
       {showThumbnail.show === true && <Thumbnail close={showThumbnail.close} />}

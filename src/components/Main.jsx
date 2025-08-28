@@ -14,6 +14,7 @@ const Main = ({ open, setCartItems }) => {
 
   const addItemToCart = (product) => {
     setCartItems({ ...product, quantity });
+    setQuantity(0);
   };
 
   return (

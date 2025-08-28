@@ -1,5 +1,8 @@
-const Cart = ({ product }) => {
-  console.log(product);
+const Cart = ({ product, setCartItems }) => {
+  const deleteCartItem = () => {
+    setCartItems(null);
+  };
+
   return (
     <div className="cart">
       <h3 className="cart-title">Cart</h3>
@@ -17,15 +20,18 @@ const Cart = ({ product }) => {
                 src={product.image}
                 alt={product.name}
               />
-              <div>
+              <div className="cart-product-price">
                 <h4>{product.name}</h4>
-                {product.price} x {product.quantity}{" "}
-                <b>{`$${product.price * product.quantity},00`}</b>
+                <p>
+                  {product.price} x {product.quantity}{" "}
+                  <b>{`$${product.price * product.quantity},00`}</b>
+                </p>
               </div>
               <img
                 className="delete-icon"
                 src="./images/icon-delete.svg"
                 alt="delete"
+                onClick={deleteCartItem}
               />
             </div>
             <button>
